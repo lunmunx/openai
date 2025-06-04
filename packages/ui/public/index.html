@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Price Comparer</title>
+</head>
+<body>
+  <h1>Price Comparer UI</h1>
+  <table id="prices"></table>
+  <script>
+    async function load() {
+      const res = await fetch('http://localhost:3000/compare?ean=123');
+      const data = await res.json();
+      const tbl = document.getElementById('prices');
+      tbl.innerHTML = data.map(p => `<tr><td>${p.name}</td><td>${p.price}</td></tr>`).join('');
+    }
+    load();
+  </script>
+</body>
+</html>

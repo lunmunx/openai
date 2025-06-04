@@ -1,0 +1,9 @@
+{
+  "name": "@price-comparer/ingestion",
+  "version": "0.1.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
