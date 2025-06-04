@@ -1,0 +1,9 @@
+{
+  "name": "@price-comparer/api",
+  "version": "0.1.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
