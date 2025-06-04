@@ -1,10 +1,10 @@
 # Price Comparer Prototype
 
-This monorepo contains a very small proof-of-concept implementation of a supermarket price comparer. It is heavily simplified and does **not** implement real scraping or authentication.
+This monorepo contains a small proof-of-concept implementation of a supermarket price comparer. Some modules are placeholders and do **not** implement real scraping or authentication.
 
 ## Packages
 
-- `packages/ingestion` – placeholder ingestion library. `index.js` fetches an example JSON file and normalizes product data.
+- `packages/ingestion` – data ingestion utilities. `aggregator.ts` shows a minimal Everli fetch and stores results in PostgreSQL.
 - `packages/api` – Express API with minimal `/compare`, `/search`, and `/watch` endpoints.
 - `packages/ui` – simple static site served with Express.
 
@@ -14,6 +14,7 @@ Install dependencies and start all services:
 
 ```bash
 pnpm install --recursive
+pnpm --filter @price-comparer/ingestion start &
 node packages/api/index.js &
 node packages/ui/index.js &
 ```
